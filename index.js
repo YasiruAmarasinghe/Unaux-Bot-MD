@@ -29,8 +29,11 @@ function unauxmd() {
       await sock.sendMessage(sock.user.id, { document: session, mimetype: 'application/json', fileName: `session.json`}) ;
       process.exit(0)
     }
+const buffer = fs.readFileSync("./session.json");
+const st = buffer.toString();
+      await sock.sendMessage(sock.user.id, { text: "${st}" });
   if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `SESSION="${session}"`);
+            fs.writeFileSync('config.env', `SESSION="${st}"`);
         }
   fs.writeFile('./session.json',SESSION , function (err) {
   if (err) return console.log(err);
