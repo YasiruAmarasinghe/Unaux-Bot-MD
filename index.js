@@ -13,7 +13,7 @@ function unauxmd() {
     printQRInTerminal: true,
     browser: ["UNAUX-MD", "Opera", "30.0.0"]
   })
-
+ 
   sock.ev.on("connection.update", async (s) => {
       console.log("Connecting......")
       console.log(figlet.textSync('UNAUX -MD', {
@@ -29,7 +29,14 @@ function unauxmd() {
       await sock.sendMessage(sock.user.id, { document: session, mimetype: 'application/json', fileName: `session.json`}) ;
       process.exit(0)
     }
-    if (
+  if (!fs.existsSync('config.env')) {
+            fs.writeFileSync('config.env', `SESSION="${session}"`);
+        }
+  fs.writeFile('./session.json',SESSION , function (err) {
+  if (err) return console.log(err);
+  console.log('suceed > session poggress');
+
+});
       connection === "close"  ) {
       unauxmd()
     }
