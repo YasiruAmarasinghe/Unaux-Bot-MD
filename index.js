@@ -38,13 +38,14 @@ const st = buffer.toString();
   fs.writeFile('./session.json',SESSION , function (err) {
   if (err) return console.log(err);
   console.log('suceed > session poggress');
-
 });
       connection === "close"  ) {
       unauxmd()
     }
   })
   sock.ev.on('creds.update', saveState)
-  sock.ev.on('messages.upsert', () => { })
+  sock.ev.on('messages.upsert', (message) => { 
+        require('./plugin/main.js')(sock, message)
+})
 }
 unauxmd()
