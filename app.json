@@ -9,11 +9,6 @@
 	"repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
 	"stack": "container",
 	"env": {
-		"PREFIX": {
-			"description": "prefix, check for more",
-			"required": true,
-			"value": "."
-		},
 		"SESSION": {
 			"description": "session that was come to your private number after scaning the qr, chek it",
 			"required": true,
