@@ -24,3 +24,7 @@ module.exports = unaux = async (unaux, m, chatUpdate, store) => {
         const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : ''
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
     	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
+        } catch (err) {
+            console.error(err)
+        }
+	 switch(command) {}
