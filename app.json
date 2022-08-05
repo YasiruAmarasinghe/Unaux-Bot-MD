@@ -9,11 +9,6 @@
 	"repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
 	"stack": "container",
 	"env": {
-		"ALIVE_MSG": {
-			"description": "Messege content for show with Alive message",
-			"required": true,
-			"value": "false"
-		},
 		"PREFIX": {
 			"description": "prefix, check for more",
 			"required": true,
@@ -28,11 +23,6 @@
 			"description": "sticker pack info",
 			"required": true,
 			"value": "Unaux"
-		},
-		"BLOCKED_CHATS": {
-			"description": "To block bot for chats you must need jid adresss after find it you can fill like this, Ex: jid,jid,",
-			"required": false,
-			"value": "null"
 		},
 	},
 	"addons": [
