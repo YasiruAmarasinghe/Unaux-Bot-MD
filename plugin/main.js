@@ -30,4 +30,8 @@ module.exports = unaux = async (unaux, m, chatUpdate, store) => {
 	 switch(command) {
                 case 'test': {
                 m.reply(`I am mark zakurburg from USA`)
-            }}
+            }
+       catch (e) {
+        console.log(e)
+    }
+}
