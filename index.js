@@ -1,7 +1,8 @@
-const { WAConnection, MessageType } = require('@adiwajshing/baileys').default
+const { default: unauxmd, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const makeWASocket = require("@adiwajshing/baileys").default
 const { exec, spawn, execSync } = require("child_process")
 const pino = require('pino')
+const  { Boom } = require('@hapi/boom')
 const fs = require('fs')
 const figlet = require('figlet')
 const qrcode = require("qrcode-terminal")
@@ -38,11 +39,21 @@ const st = buffer.toString();
   fs.writeFile('./session.json',SESSION , function (err) {
   if (err) return console.log(err);
   console.log('suceed > session poggress');
+  const { connection, lastDisconnect } = update	    
+        if (connection === 'close') {
+        let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
+            if (reason === DisconnectReason.badSession) { console.log(`unaux bot : Bad Session File, Please Delete Session and Scan Again`); process.exit(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("unaux bot : Connection closed, Reconnecting...."); unauxmd(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("unaux bot : Connection Lost from Server, Reconnecting..."); unauxmd (); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("unaux bot : Connection Replaced, Another New Session Opened, Please Close Current Session First"); process.exit(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`unaux bot : Device Logged Out, Please Delete Session And Scan Again.`); process.exit(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("unaux bot : Restart Required, Restarting..."); unauxmd(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("unaux bot : Connection TimedOut, Reconnecting..."); unauxmd(); }
+            else { console.log(`unaux bot : Unknown DisconnectReason: ${reason}|${connection}`) }
+        }
+        console.log('Unauxbot...', update)
+    })
 });
-      connection === "close"  ) {
-      unauxmd()
-    }
-  })
   sock.ev.on('creds.update', saveState)
   sock.ev.on('messages.upsert', (message) => { 
         require('./plugin/main.js')(sock, message)
