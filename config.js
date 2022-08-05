@@ -3,7 +3,6 @@ const toBool = (x) => x == 'true'
 const { Sequelize } = require('sequelize')
 const { existsSync } = require('fs')
 if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
-global.alivelogo = 
 global.APIs = { 
   zahir: 'https://zahirr-web.herokuapp.com',
   zeks: 'https://api.zeks.me',
