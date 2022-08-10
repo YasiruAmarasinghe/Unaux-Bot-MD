@@ -1,6 +1,7 @@
 {
     "name": "UNAUX MD",
     "description": "whatsapp bot .",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
     "keywords": ["whatsapp", "userbot", "Unauxmd" ],
     "repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
     "stack": "container",
