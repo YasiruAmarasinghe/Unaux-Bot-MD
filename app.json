@@ -6,12 +6,16 @@
   "logo": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD/blob/main/src/Logo.png",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
-  "env":{
-        "He":{
-              "description":"",
-              "required":true
-              }
-         }
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
   "buildpacks": [
   {
     "url": "heroku/nodejs"
