@@ -6,12 +6,6 @@
   "logo": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD/blob/main/src/Logo.png",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
-  "env":{
-             "SESSION": {	
-             "description": "sto",			
-             "required": true	
-                   	},
-        }
   "buildpacks": [
   {
     "url": "heroku/nodejs"
