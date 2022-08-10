@@ -2,8 +2,8 @@
 	"name": "UNAUX-MD",
 	"description": "Whatsapp bot",
 	"keywords": [
-		"whatsapp",
-		"bot"
+		"whatsapp",,
+		"bot",
                 "nodejs"
 	],
 	"repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
