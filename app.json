@@ -1,10 +1,17 @@
 
 {
-  "name": "bot",
-  "description": "Subojgg",
+  "name": "unaux bot md",
+  "description": "he",
   "repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD/blob/main/src/Logo.png",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
+  "stack":"container",
+  "env":{
+             "SESSION": {	
+             "description": "sto",			
+             "required": true,			
+                   	},
+        }
   "buildpacks": [
   {
     "url": "heroku/nodejs"
