@@ -7,13 +7,9 @@
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
   "env": {
-    "SECRET_TOKEN": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
-    },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
+    "SESSION": {
+      "description": "A secret key for verify.",
+      "required": true,
     }
   },
   "buildpacks": [
