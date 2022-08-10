@@ -1,16 +1,11 @@
-{
-	"name": "UNAUX-MD",
+{       "name": "UNAUX-MD",
 	"description": "Whatsapp bot",
-	"keywords": [
-		"whatsapp",,
-		"bot",
-                "nodejs"
-	],
+	"keywords": ["whatsapp","bot","nodejs"],
 	"repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
 	"stack": "container",
 	"env": {
 		"SESSION": {
-			"description": "session that was come to your private number after scaning the qr, chek it",
+			"description": "session that was come to your private number after scaning the qr chek it",
 			"required": true,
 			"value": ""
 		},
