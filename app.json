@@ -11,15 +11,9 @@
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     },
-    "SESSION": ""
+    "SESSION": {
       "description": "A secret key for verifying the integrity of signed cookies.",
-  },
-  "environments": {
-    "test": {
-      "env": {
-        "SECRET_TOKEN": "test-secret"
-      }
-    }
+    },
   },
   "buildpacks": [
   {
