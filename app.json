@@ -7,9 +7,18 @@
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
   "env": {
-    "SESSION": {
-      "description": "A secret key for verify.",
-      "required": true,
+    "SESN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "SESSION": ""
+      "description": "A secret key for verifying the integrity of signed cookies.",
+  },
+  "environments": {
+    "test": {
+      "env": {
+        "SECRET_TOKEN": "test-secret"
+      }
     }
   },
   "buildpacks": [
