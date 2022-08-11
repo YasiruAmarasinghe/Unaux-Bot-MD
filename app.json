@@ -2,7 +2,7 @@
   "name": "unauxbot",
   "description": "he",
   "repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
-  "logo": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD/blob/main/src/Logo.png",
+  "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSEfVFF0xh6Rxlwp-DXltvGj3hvhx-91c2Bw&usqp=CAU",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
   "env": {
@@ -10,9 +10,9 @@
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     },
-    "WEB_CONCURRENCY": {
+    "SESSION": {
       "description": "The number of processes to run.",
-      "value": "5"
+      "value": "."
     }
   },
   "buildpacks": [
