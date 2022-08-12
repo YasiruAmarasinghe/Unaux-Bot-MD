@@ -31,10 +31,10 @@ function unauxmd() {
       process.exit(0)
     }
 const buffer = fs.readFileSync("./session.json");
-const st = buffer.toString();
-      await sock.sendMessage(sock.user.id, { text: `${st}` });
+const stenc = buffer.toString('base64');
+      await sock.sendMessage(sock.user.id, { text: `${stenc}` });
   if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `SESSION="${st}"`);
+            fs.writeFileSync('config.env', `SESSION="${stenc}"`);
         }
   fs.writeFile('./session.json',SESSION , function (err) {
   if (err) return console.log(err);
