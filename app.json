@@ -6,9 +6,9 @@
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
   "env": {
-    "SECRET": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
+    "BOT_NAME": {
+      "description": "NAME FOR THE BOT",
+      "value": "UNAUX-MD"
     },
     "SESSION": {
       "description": "ENTER YOUR SESSION HERE, WHICH SEND WHEN YOU SCANED QR CODE",
