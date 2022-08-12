@@ -18,7 +18,6 @@ global.APIKeys = {
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
-global.WM = STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'Unaux',
 let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
