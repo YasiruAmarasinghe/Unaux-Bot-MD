@@ -1,18 +1,18 @@
 {
-  "name": "unauxbot",
-  "description": "he",
+  "name": "UNAUX-MD",
+  "description": "An advance whatsapp bot made with nodejs and baileys WA API, DEVOLOP BY: unaux-team",
   "repository": "https://github.com/YasiruAmarasinghe/Unaux-Bot-MD",
   "logo": "https://telegra.ph//file/048945c67c508d728121a.gif",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "stack":"container",
   "env": {
-    "SECRET_TOKEN": {
+    "SECRET": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     },
     "SESSION": {
-      "description": "The number of processes to run.",
-      "value": "."
+      "description": "ENTER YOUR SESSION HERE, WHICH SEND WHEN YOU SCANED QR CODE",
+      "value": ""
     }
   },
   "buildpacks": [
