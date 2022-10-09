@@ -1,4 +1,4 @@
-FROM unaxbotmd/yasiruamarasinghe:main
+FROM yasiruamarasinghe/unauxbotmd:main
 
 RUN git clone https://github.com/YasiruAmarasinghe/Unaux-Bot-MD /root/Unaux-Bot-MD
 WORKDIR /root//Unaux-Bot-MD
