@@ -1,4 +1,4 @@
-FROM yasiruamarasinghe/unauxbotmd:beta
+FROM yasiruamarasinghe/unauxbotmd:latest
 
 RUN git clone https://github.com/YasiruAmarasinghe/Unaux-Bot-MD /root/Unaux-Bot-MD
 WORKDIR /root//Unaux-Bot-MD
