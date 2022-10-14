@@ -5,5 +5,5 @@ WORKDIR /root/unauxbotmd
 ENV TZ=Europe/Istanbul
 RUN npm install
 RUN npm start
-COPY --from=builder /root/unauxbotmd
+COPY --from=builder /root/unauxbotmd .
 CMD ["node", "index.js"]
