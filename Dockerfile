@@ -1,6 +1,6 @@
 FROM yasiruamarasinghe/unauxbotmd
 
-RUN git clone https://github.com/YasiruAmarasinghe/Unaux-Bot-MD /root/Unaux-Bot-MD
+RUN git clone https://github.com/YasiruAmarasinghe/Unaux-Bot-MD /root/unauxbotmd
 WORKDIR /root/unauxbotmd
 ENV TZ=Europe/Istanbul
 RUN npm install
